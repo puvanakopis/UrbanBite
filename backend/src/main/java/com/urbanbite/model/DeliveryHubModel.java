@@ -1,0 +1,69 @@
+package com.urbanbite.model;
+
+import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "delivery_hubs")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class DeliveryHubModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false, length = 150)
+    private String hubName;
+
+    @Column(length = 120)
+    private String contactPerson;
+
+    @Column(nullable = false, unique = true, length = 150)
+    private String email;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Column(length = 30)
+    private String phone;
+
+    @Column(length = 50)
+    private String vehicleType;
+
+    @Column(length = 150)
+    private String serviceArea;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 30)
+    @Builder.Default
+    private Role role = Role.ROLE_DELIVERY_PARTNER;
+
+    @Column(nullable = false)
+    @Builder.Default
+    private boolean isVerified = false;
+
+    @Column(nullable = false)
+    @Builder.Default
+    private boolean isActive = true;
+
+    @CreationTimestamp
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
+
+    public String getFullName() {
+        return (hubName != null && !hubName.isBlank()) 
+                ? hubName 
+                : (contactPerson != null ? contactPerson : "Delivery Hub");
+    }
+}
