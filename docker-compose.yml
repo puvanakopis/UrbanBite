@@ -1,0 +1,91 @@
+services:
+  # -------------------------------------------------------------
+  # PostgreSQL Database
+  # -------------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    container_name: urbanbite-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: urbanbite_db
+      POSTGRES_USER: urbanbite
+      POSTGRES_PASSWORD: urbanbite_secret_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U urbanbite -d urbanbite_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - urbanbite-network
+
+  # -------------------------------------------------------------
+  # MailHog - Local SMTP & Webmail for testing OTPs and Notifications
+  # -------------------------------------------------------------
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: urbanbite-mailhog
+    restart: always
+    ports:
+      - "1025:1025" # SMTP server
+      - "8025:8025" # Web UI to view emails
+    networks:
+      - urbanbite-network
+
+  # -------------------------------------------------------------
+  # Spring Boot Backend API
+  # -------------------------------------------------------------
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: urbanbite-backend
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mailhog:
+        condition: service_started
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/urbanbite_db
+      SPRING_DATASOURCE_USERNAME: urbanbite
+      SPRING_DATASOURCE_PASSWORD: urbanbite_secret_password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.PostgreSQLDialect
+      SPRING_MAIL_HOST: mailhog
+      SPRING_MAIL_PORT: 1025
+      JWT_SECRET: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      JWT_EXPIRATION_MS: 86400000
+    ports:
+      - "8080:8080"
+    networks:
+      - urbanbite-network
+
+  # -------------------------------------------------------------
+  # Angular Frontend (Nginx Reverse Proxy)
+  # -------------------------------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: urbanbite-frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+      - "4200:80"
+    networks:
+      - urbanbite-network
+
+networks:
+  urbanbite-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
