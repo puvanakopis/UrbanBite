@@ -1,14 +1,13 @@
 package com.urbanbite.repository;
 
-import com.urbanbite.model.Restaurant;
+import com.urbanbite.model.RestaurantModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import java.util.Optional;
 
 @Repository
-public interface RestaurantRepository extends JpaRepository<Restaurant, Long> {
-    List<Restaurant> findByCityIgnoreCase(String city);
-    List<Restaurant> findByCuisineIgnoreCase(String cuisine);
-    List<Restaurant> findByIsOpenTrue();
+public interface RestaurantRepository extends JpaRepository<RestaurantModel, Long> {
+    Optional<RestaurantModel> findByEmailIgnoreCase(String email);
+    boolean existsByEmailIgnoreCase(String email);
 }
