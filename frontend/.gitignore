@@ -1,4 +1,4 @@
-# Angular & TypeScript Build Output
+# Angular & TypeScript Build Outputs
 dist/
 tmp/
 temp/
@@ -7,12 +7,14 @@ bazel-out/
 build/
 *.tsbuildinfo
 
-# Angular CLI & Caching
+# Angular CLI & Tool Caches
 .angular/
 .sass-cache/
 .postcss-cache/
+.eslintcache/
+.cache/
 
-# Node.js Dependencies & Logs
+# Node.js Dependencies & Lock Debug Logs
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -31,19 +33,22 @@ libpeerconnection.log
 *.lcov
 .nyc_output/
 reports/
+test-results/
+playwright-report/
 
-# Environment Variables & Local Configs
+# Environment Variables & Local Configurations
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 .env.*.local
+!.env.example
 src/environments/environment.local.ts
 src/environments/environment.development.local.ts
 src/environments/environment.production.local.ts
 
-# IDEs and Editors
+# IDEs & Code Editors
 .idea/
 *.iml
 *.iws
@@ -61,8 +66,9 @@ src/environments/environment.production.local.ts
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.fleet/
 
-# OS & System Files
+# Operating System Files
 .DS_Store
 .DS_Store?
 ._*

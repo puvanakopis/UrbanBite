@@ -1,17 +1,17 @@
-# Compiled class file
+# Compiled Class Files
 *.class
 
-# Log files
+# Log Files
 *.log
 logs/
 
-# BlueJ files
+# BlueJ Files
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -20,13 +20,13 @@ logs/
 *.tar.gz
 *.rar
 
-# Maven build output
+# Maven Build Output
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# Maven release & version backups
+# Maven Release & Version Backups
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -35,16 +35,16 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
 
-# Virtual Machine / JVM crash logs
+# JVM Crash Logs
 hs_err_pid*
 replay_pid*
 
-# Local environment & secret configurations
+# Local Environment & Secret Configurations
 .env
 .env.local
 .env.*.local
+!.env.example
 application-local.properties
 application-local.yml
 application-local.yaml
@@ -53,31 +53,31 @@ application-secret.yml
 application-secret.yaml
 application-dev.properties.local
 application-dev.yml.local
+.spring-boot-devtools.properties
 
-# Database local storage / dumps
+# Database Local Storage & Dumps
 *.sqlite
 *.db
 *.dump
 
-### STS (Spring Tool Suite) ###
+# STS (Spring Tool Suite) & Eclipse
 .apt_generated
 .apt_generated_tests
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
+# IntelliJ IDEA
 .idea/
 *.iws
 *.iml
 *.ipr
 out/
-*.swp
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -87,10 +87,11 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# VS Code & Fleet
 .vscode/
+.fleet/
 
-### OS & Miscellaneous ###
+# Operating System & Editor Temp Files
 .DS_Store
 .DS_Store?
 ._*
@@ -99,3 +100,6 @@ build/
 ehthumbs.db
 Thumbs.db
 desktop.ini
+*.swp
+*.swo
+*~
