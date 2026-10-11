@@ -1,6 +1,10 @@
-<header class="app-header">
-  <h1 class="project-title">{{ title }}</h1>
-</header>
-<main>
-  <router-outlet />
+<app-customer-navbar *ngIf="!isRestaurantRoute && !isDeliveryRoute && !isAdminRoute"></app-customer-navbar>
+<app-restaurant-navbar *ngIf="isRestaurantRoute"></app-restaurant-navbar>
+<app-delivery-navbar *ngIf="isDeliveryRoute"></app-delivery-navbar>
+<app-admin-navbar *ngIf="isAdminRoute"></app-admin-navbar>
+
+<main class="min-h-screen bg-[#090909] text-white">
+  <router-outlet></router-outlet>
 </main>
+
+<app-footer *ngIf="!isRestaurantRoute && !isDeliveryRoute && !isAdminRoute"></app-footer>

@@ -1,1 +1,398 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Tailwind-powered design system shortcuts */
+  .ub-card {
+    @apply bg-surface border border-border-subtle rounded p-6 transition-all duration-200 hover:border-neutral-700;
+  }
+  .ub-card-hover {
+    @apply bg-surface border border-border-subtle rounded transition-all duration-300 hover:bg-surface-hover hover:border-neutral-600 hover:-translate-y-1;
+  }
+  .ub-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black font-bold text-xs uppercase tracking-wider rounded transition-all duration-200 hover:bg-neutral-200 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-40 disabled:cursor-not-allowed disabled:transform-none;
+  }
+  .ub-btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-white border border-neutral-700 font-bold text-xs uppercase tracking-wider rounded transition-all duration-200 hover:border-white hover:bg-white/5 active:translate-y-0 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .ub-btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-gold text-black font-bold text-xs uppercase tracking-wider rounded transition-all duration-200 hover:bg-gold-light hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-40;
+  }
+  .ub-input {
+    @apply w-full px-4 py-3.5 bg-neutral-900 border border-border-subtle rounded text-white text-sm outline-none transition-colors duration-150 focus:border-gold focus:bg-neutral-950 placeholder-neutral-600;
+  }
+  .ub-badge-gold {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-gold/15 border border-gold/40 text-gold font-bold text-xs rounded tracking-wider uppercase;
+  }
+  .ub-badge-green {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 font-bold text-xs rounded tracking-wider uppercase;
+  }
+  .ub-badge-red {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-rose-950/60 border border-rose-500/40 text-rose-400 font-bold text-xs rounded tracking-wider uppercase;
+  }
+}
+
+/* ==========================================================================
+   URBANBITE DESIGN SYSTEM — LUXURY DARK RESTAURANT THEME
+   Faithfully inspired by the Kofeo luxury dining & delivery visual references
+   ========================================================================== */
+
+:root {
+  --bg-canvas: #090909;
+  --bg-surface-1: #111111;
+  --bg-surface-2: #161616;
+  --bg-card: #141414;
+  --bg-card-hover: #1c1c1c;
+  --bg-input: #151515;
+  --bg-modal: #181818;
+
+  --border-subtle: #242424;
+  --border-medium: #333333;
+  --border-highlight: #555555;
+  --border-gold: #c5a059;
+
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #666666;
+  --text-accent: #e5c378;
+
+  --accent-gold: #c5a059;
+  --accent-gold-light: #e0be77;
+  --accent-green: #38b000;
+  --accent-red: #d90429;
+  --accent-blue: #0077b6;
+
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Cinzel', serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.15s ease;
+  --transition-smooth: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ==========================================================================
+   CONTAINER & LAYOUT
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-lg {
+  padding: 120px 0;
+}
+
+.section-header {
+  margin-bottom: 48px;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.section-title {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-top: 12px;
+  max-width: 640px;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: var(--border-medium);
+}
+
+.btn-outline:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: #000000;
+  border-color: var(--accent-gold);
+}
+
+.btn-gold:hover {
+  background-color: var(--accent-gold-light);
+  border-color: var(--accent-gold-light);
+}
+
+.btn-danger {
+  background-color: transparent;
+  color: var(--accent-red);
+  border-color: rgba(217, 4, 41, 0.4);
+}
+
+.btn-danger:hover {
+  background-color: var(--accent-red);
+  color: #ffffff;
+  border-color: var(--accent-red);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 11px;
+}
+
+.btn-lg {
+  padding: 16px 36px;
+  font-size: 14px;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ==========================================================================
+   INPUTS & FORMS
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 18px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 14px;
+  outline: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--border-highlight);
+  background-color: #1a1a1a;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-error {
+  color: var(--accent-red);
+  font-size: 12px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   CARDS & CONTAINERS
+   ========================================================================== */
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: all var(--transition-smooth);
+}
+
+.card:hover {
+  border-color: var(--border-medium);
+  background-color: var(--bg-card-hover);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}
+
+.badge-success {
+  background-color: rgba(56, 176, 0, 0.12);
+  color: #38b000;
+  border-color: rgba(56, 176, 0, 0.3);
+}
+
+.badge-gold {
+  background-color: rgba(197, 160, 89, 0.12);
+  color: var(--accent-gold-light);
+  border-color: rgba(197, 160, 89, 0.3);
+}
+
+.badge-danger {
+  background-color: rgba(217, 4, 41, 0.12);
+  color: var(--accent-red);
+  border-color: rgba(217, 4, 41, 0.3);
+}
+
+.badge-neutral {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   WATERMARK STYLING (Matching the Kofeo screenshots)
+   ========================================================================== */
+
+.brand-watermark {
+  font-family: var(--font-serif);
+  font-size: clamp(80px, 16vw, 240px);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.032);
+  text-align: center;
+  letter-spacing: 0.08em;
+  user-select: none;
+  pointer-events: none;
+  line-height: 0.9;
+  text-transform: none;
+}
+
+
+/* ==========================================================================
+   SCROLLBAR & UTILITIES
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
