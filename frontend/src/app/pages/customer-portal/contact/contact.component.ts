@@ -78,7 +78,7 @@ interface FaqItem {
 
             <!-- RESTAURANT INTERIOR PHOTO (Right) -->
             <div class="rounded overflow-hidden border border-[#242424] shadow-2xl min-h-[420px]">
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1000&q=80" alt="UrbanBite restaurant dining room" class="w-full h-full object-cover" />
+              <img src="/images/restaurant-dining.jpg" alt="UrbanBite restaurant dining room" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ interface FaqItem {
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             <div class="h-72 rounded border border-[#242424] bg-cover bg-center relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300" 
-                 style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=80');">
+                 style="background-image: url('/images/loft-dubai.jpg');">
               <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
                 <span class="text-[10px] font-extrabold tracking-wider text-gold">UAE</span>
                 <h4 class="text-base font-bold text-white mt-1">DUBAI, UAE</h4>
@@ -103,7 +103,7 @@ interface FaqItem {
             </div>
 
             <div class="h-72 rounded border border-[#242424] bg-cover bg-center relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300" 
-                 style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=500&q=80');">
+                 style="background-image: url('/images/loft-sydney.jpg');">
               <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
                 <span class="text-[10px] font-extrabold tracking-wider text-gold">USA</span>
                 <h4 class="text-base font-bold text-white mt-1">NEW YORK, USA</h4>
@@ -112,7 +112,7 @@ interface FaqItem {
             </div>
 
             <div class="h-72 rounded border border-[#242424] bg-cover bg-center relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300" 
-                 style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=500&q=80');">
+                 style="background-image: url('/images/loft-london.jpg');">
               <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
                 <span class="text-[10px] font-extrabold tracking-wider text-gold">UK</span>
                 <h4 class="text-base font-bold text-white mt-1">LONDON, UK</h4>
@@ -121,7 +121,7 @@ interface FaqItem {
             </div>
 
             <div class="h-72 rounded border border-[#242424] bg-cover bg-center relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300" 
-                 style="background-image: url('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=500&q=80');">
+                 style="background-image: url('/images/loft-tokyo.jpg');">
               <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
                 <span class="text-[10px] font-extrabold tracking-wider text-gold">JAPAN</span>
                 <h4 class="text-base font-bold text-white mt-1">TOKYO, JAPAN</h4>
@@ -130,7 +130,7 @@ interface FaqItem {
             </div>
 
             <div class="h-72 rounded border border-[#242424] bg-cover bg-center relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300" 
-                 style="background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&q=80');">
+                 style="background-image: url('/images/loft-paris.jpg');">
               <div class="absolute bottom-0 left-0 w-full p-5 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
                 <span class="text-[10px] font-extrabold tracking-wider text-gold">FRANCE</span>
                 <h4 class="text-base font-bold text-white mt-1">PARIS, FRANCE</h4>
@@ -167,7 +167,7 @@ interface FaqItem {
             <!-- Left: Chef Showcase Card (5 cols on lg) -->
             <div class="lg:col-span-5">
               <div class="rounded overflow-hidden border border-[#242424] shadow-2xl relative group h-[480px] lg:h-[580px] bg-[#111]">
-                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900&q=80" 
+                <img src="/images/master-chef.jpg" 
                      alt="Executive Culinary Director" 
                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>

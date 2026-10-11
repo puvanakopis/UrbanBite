@@ -240,7 +240,7 @@ import { Order } from '../../../models/order.models';
             <div *ngIf="items.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               <div *ngFor="let it of items | slice:0:4" class="p-4 bg-[#0d0d0d] border border-[#242424] rounded flex flex-col justify-between hover:border-neutral-700 transition-colors">
                 <div>
-                  <img [src]="it.imageUrl || 'https://images.unsplash.com/photo-1544025162-d76694265947?w=300&q=80'" class="w-full h-28 object-cover rounded mb-3 border border-[#242424]" />
+                  <img [src]="it.imageUrl || '/images/signature-steak.jpg'" class="w-full h-28 object-cover rounded mb-3 border border-[#242424]" />
                   <h4 class="font-bold text-white text-xs truncate">{{ it.name }}</h4>
                   <p class="text-[11px] text-neutral-400 line-clamp-2 mt-0.5">{{ it.description }}</p>
                 </div>

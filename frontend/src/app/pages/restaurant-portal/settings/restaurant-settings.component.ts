@@ -161,7 +161,7 @@ import { Restaurant } from '../../../models/restaurant.models';
               <!-- Customer Card Representation -->
               <div class="bg-[#181818] border border-[#242424] rounded overflow-hidden shadow-lg">
                 <div class="relative h-44 bg-neutral-900">
-                  <img [src]="restaurant.imageUrl || 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80'" 
+                  <img [src]="restaurant.imageUrl || '/images/restaurant-dining.jpg'" 
                        class="w-full h-full object-cover" />
                   <div class="absolute top-3 right-3">
                     <span class="px-2.5 py-1 text-[10px] font-bold tracking-wider rounded uppercase shadow"

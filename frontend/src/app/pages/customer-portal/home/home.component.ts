@@ -17,15 +17,15 @@ import { Restaurant } from '../../../models/restaurant.models';
         <div class="absolute inset-0 grid grid-cols-1 md:grid-cols-3 h-full w-full">
           <!-- Panel 1: Dining Salon -->
           <div class="relative h-full w-full bg-cover bg-center" 
-               style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80');">
+               style="background-image: url('/images/restaurant-dining.jpg');">
           </div>
           <!-- Panel 2: Table Setting & Atmosphere -->
           <div class="hidden md:block relative h-full w-full bg-cover bg-center border-x border-black/40" 
-               style="background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1200&q=80');">
+               style="background-image: url('/images/restaurant-ambiance.jpg');">
           </div>
           <!-- Panel 3: Culinary & Bar Spread -->
           <div class="hidden md:block relative h-full w-full bg-cover bg-center" 
-               style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80');">
+               style="background-image: url('/images/restaurant-tables.jpg');">
           </div>
         </div>
 
@@ -86,7 +86,7 @@ import { Restaurant } from '../../../models/restaurant.models';
             </div>
 
             <div class="relative rounded overflow-hidden border border-[#242424] h-[460px] group">
-              <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&q=80" alt="Culinary craftsmanship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="/images/culinary-craft.jpg" alt="Culinary craftsmanship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/90 to-transparent">
                 <span class="text-[11px] font-bold tracking-[2px] text-gold">KOFEO SIGNATURE</span>
                 <h4 class="text-xl font-bold text-white mt-1.5">Hand-Rolled Black Truffle Tagliolini</h4>
@@ -344,12 +344,12 @@ import { Restaurant } from '../../../models/restaurant.models';
           </a>
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 h-48 lg:h-56">
-          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&q=80');"></div>
-          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&q=80');"></div>
-          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80');"></div>
-          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=400&q=80');"></div>
-          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80');"></div>
-          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80');"></div>
+          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('/images/culinary-craft.jpg');"></div>
+          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('/images/woodfired-pizza.jpg');"></div>
+          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('/images/restaurant-dining.jpg');"></div>
+          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('/images/artisan-cocktail.jpg');"></div>
+          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('/images/signature-steak.jpg');"></div>
+          <div class="bg-cover bg-center brightness-90 hover:brightness-100 transition-all duration-300" style="background-image: url('/images/gourmet-burger.jpg');"></div>
         </div>
       </section>
     </div>

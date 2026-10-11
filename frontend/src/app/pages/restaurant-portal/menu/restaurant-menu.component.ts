@@ -155,7 +155,7 @@ import { Restaurant, MenuCategory, MenuItem } from '../../../models/restaurant.m
                 <tr *ngFor="let it of filteredItems" class="hover:bg-[#181818]/60 transition-colors">
                   <td class="p-4 sm:p-5">
                     <div class="flex items-center gap-3.5">
-                      <img [src]="it.imageUrl || 'https://images.unsplash.com/photo-1544025162-d76694265947?w=120&q=80'" 
+                      <img [src]="it.imageUrl || '/images/signature-steak.jpg'" 
                            class="w-12 h-12 rounded object-cover bg-neutral-900 border border-[#242424] shrink-0" />
                       <div class="max-w-md">
                         <strong class="text-white block text-sm">{{ it.name }}</strong>

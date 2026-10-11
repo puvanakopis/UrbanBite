@@ -26,11 +26,11 @@ import { RouterModule } from '@angular/router';
         <div class="relative z-10 w-full max-w-7xl mx-auto px-6 mt-12">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-96">
             <div class="md:col-span-2 h-64 md:h-full rounded border border-[#242424] bg-cover bg-center" 
-                 style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80');"></div>
+                 style="background-image: url('/images/restaurant-dining.jpg');"></div>
             <div class="h-64 md:h-full rounded border border-[#242424] bg-cover bg-center" 
-                 style="background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=500&q=80');"></div>
+                 style="background-image: url('/images/restaurant-ambiance.jpg');"></div>
             <div class="h-64 md:h-full rounded border border-[#242424] bg-cover bg-center" 
-                 style="background-image: url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500&q=80');"></div>
+                 style="background-image: url('/images/culinary-craft.jpg');"></div>
           </div>
         </div>
       </section>
@@ -56,12 +56,12 @@ import { RouterModule } from '@angular/router';
 
             <!-- Col 2: Center Image -->
             <div class="h-[420px] rounded overflow-hidden border border-[#242424]">
-              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80" alt="Master Chef Preparing Dish" class="w-full h-full object-cover" />
+              <img src="/images/master-chef.jpg" alt="Master Chef Preparing Dish" class="w-full h-full object-cover" />
             </div>
 
             <!-- Col 3: Right Feature Callout -->
             <div class="bg-[#141414] border border-[#242424] rounded overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80" alt="Signature steak plating" class="h-48 w-full object-cover" />
+              <img src="/images/signature-steak.jpg" alt="Signature steak plating" class="h-48 w-full object-cover" />
               <div class="p-6">
                 <h4 class="text-lg font-bold text-white mb-2">Sourced with Ethics</h4>
                 <p class="text-sm text-neutral-400 leading-relaxed">
@@ -85,7 +85,7 @@ import { RouterModule } from '@angular/router';
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
             <!-- Left Image -->
             <div class="rounded border border-[#242424] bg-cover bg-center min-h-[340px]" 
-                 style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80');"></div>
+                 style="background-image: url('/images/restaurant-tables.jpg');"></div>
 
             <!-- Center Hours & Locations -->
             <div class="bg-[#111] border border-[#242424] rounded p-8 sm:p-10 flex flex-col justify-center">
@@ -126,7 +126,7 @@ import { RouterModule } from '@angular/router';
 
             <!-- Right Image -->
             <div class="rounded border border-[#242424] bg-cover bg-center min-h-[340px]" 
-                 style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80');"></div>
+                 style="background-image: url('/images/restaurant-dining.jpg');"></div>
           </div>
         </div>
       </section>
@@ -141,7 +141,7 @@ import { RouterModule } from '@angular/router';
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-[#141414] border border-[#242424] rounded overflow-hidden hover:border-neutral-600 hover:-translate-y-1 transition-all duration-300">
-              <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500&q=80');"></div>
+              <div class="h-48 bg-cover bg-center" style="background-image: url('/images/culinary-craft.jpg');"></div>
               <div class="p-6">
                 <span class="text-[11px] font-bold tracking-wider text-gold uppercase block mb-2.5">OCTOBER 2026 • 4 MIN READ</span>
                 <h3 class="text-lg font-bold text-white mb-2.5 leading-snug">The Alchemy of 48-Hour Cold Pasta Fermentation</h3>
@@ -150,7 +150,7 @@ import { RouterModule } from '@angular/router';
             </div>
 
             <div class="bg-[#141414] border border-[#242424] rounded overflow-hidden hover:border-neutral-600 hover:-translate-y-1 transition-all duration-300">
-              <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80');"></div>
+              <div class="h-48 bg-cover bg-center" style="background-image: url('/images/signature-steak.jpg');"></div>
               <div class="p-6">
                 <span class="text-[11px] font-bold tracking-wider text-gold uppercase block mb-2.5">SEPTEMBER 2026 • 6 MIN READ</span>
                 <h3 class="text-lg font-bold text-white mb-2.5 leading-snug">Selecting Marble Score 7+ Wagyu with Chef Bellini</h3>
@@ -159,7 +159,7 @@ import { RouterModule } from '@angular/router';
             </div>
 
             <div class="bg-[#141414] border border-[#242424] rounded overflow-hidden hover:border-neutral-600 hover:-translate-y-1 transition-all duration-300">
-              <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&q=80');"></div>
+              <div class="h-48 bg-cover bg-center" style="background-image: url('/images/artisan-cocktail.jpg');"></div>
               <div class="p-6">
                 <span class="text-[11px] font-bold tracking-wider text-gold uppercase block mb-2.5">SEPTEMBER 2026 • 3 MIN READ</span>
                 <h3 class="text-lg font-bold text-white mb-2.5 leading-snug">Single Origin Extraction: The Cold Drip Ritual</h3>
